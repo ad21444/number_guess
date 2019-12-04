@@ -7,13 +7,16 @@ a = 0
 while True:
 	print('請輸入一個在',start,'到',end,'之間的整數')
 	num = int(input())
-	a = a +1
-	if n == num :
-		print('答案正確')
-		print('共猜了', a ,'次')
-		break
-	elif n >num :
-		print('猜的數字比答案小')
+	if num>end or num<start:
+		print('輸入錯誤')
 	else:
-		print('猜的數字比答案大')
-	print('已經猜了', a ,'次')
+		a = a +1
+		if n == num :
+			print('答案正確')
+			print('共猜了', a ,'次')
+			break
+		elif n >num :
+			print('猜的數字比答案小')
+		else:
+			print('猜的數字比答案大')
+		print('已經猜了', a ,'次')
