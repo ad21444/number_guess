@@ -1,9 +1,12 @@
 import random
-n = random.randint(1,100)
-i = -1
+start = int(input('隨機範圍起始值'))
+end = int(input('隨機範圍結束值'))
+
+n = random.randint(start,end)
 a = 0
 while True:
-	num = int(input('請輸入一個1-100之間的整數'))
+	print('請輸入一個在',start,'到',end,'之間的整數')
+	num = int(input())
 	a = a +1
 	if n == num :
 		print('答案正確')
